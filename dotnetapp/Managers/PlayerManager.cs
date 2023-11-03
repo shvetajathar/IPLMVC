@@ -13,15 +13,14 @@ namespace dotnetapp.Managers
 {
     public class PlayerManager
     {
+        private List<Player> players=new List<Player>();
         public void DisplayAllPlayers()
         {
 
         }
         public void AddPlayer()
         {
-            Player p =new Player();
-            p.
-
+            players.Add(new Player{})
         }
         public void DeletePlayer()
         {
@@ -32,6 +31,10 @@ namespace dotnetapp.Managers
             
         }
         public void ListPlayers()
+        {
+            
+        }
+        public void FindPlayer()
         {
             
         }

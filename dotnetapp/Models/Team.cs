@@ -9,6 +9,8 @@ namespace dotnetapp.Models
     {
          
         public string TeamName{get;set;}
+
+       
         
         // Write your Team class here...        
     }
