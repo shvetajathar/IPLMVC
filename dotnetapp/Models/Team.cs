@@ -9,9 +9,7 @@ namespace dotnetapp.Models
     {
          
         public string TeamName{get;set;}
-        public int Age{get;set;}
-        public string Category{get;set;}
-        public decimal BiddingPrice{get;set;}
+        
         // Write your Team class here...        
     }
 }

@@ -9,6 +9,26 @@ namespace dotnetapp.Managers
 {
     public class TeamManager
     {
+        public void CreateTeam()
+        {
+
+        }
+        public void UpdateTeam()
+        {
+
+        }
+        
+        public void DeleteTeam()
+        {
+
+        }
+        
+        public void ListTeams()
+        {
+
+        }
+        
+
         // Write your functions here...
         // CreateTeam
         // UpdateTeam
