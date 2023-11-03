@@ -16,7 +16,12 @@ namespace dotnetapp.Managers
         
         public void DisplayAllPlayers()
         {
-            
+            string constr="User ID =sa;password=examlyMssql@123;server=localhost;Database=DbName;trusted_connection=false;Persist Security Info=False;Encrypt=False";
+            SqlConnection con=new SqlConnection(constr);
+            SqlCommand cmd=new SqlCommand("select * from Player",con);
+            con.Open();
+            SqlDataReader reader=cmd.ExecuteReader();
+            console.WriteLine({reader.Id} {reader.Name} {reader.Age} )
 
         }
         public void AddPlayer()
