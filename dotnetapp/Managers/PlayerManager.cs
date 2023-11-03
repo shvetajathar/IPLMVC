@@ -13,9 +13,10 @@ namespace dotnetapp.Managers
 {
     public class PlayerManager
     {
-        private List<Player> players=new List<Player>();
+        
         public void DisplayAllPlayers()
         {
+            
 
         }
         public void AddPlayer()
