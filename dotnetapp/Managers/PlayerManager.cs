@@ -21,12 +21,17 @@ namespace dotnetapp.Managers
             SqlCommand cmd=new SqlCommand("select * from Player",con);
             con.Open();
             SqlDataReader reader=cmd.ExecuteReader();
-            console.WriteLine({reader.Id} {reader.Name} {reader.Age} )
+            while(reader.Read())
+            {
+                console.WriteLine($"{reader["Id"]} {reader["Name"]} {reader["Age"]} {reader["Category"]} {reader["BiddingPrice"]}");
+            }
 
         }
-        public void AddPlayer()
+        public void AddPlayer(Player p)
         {
-            players.Add(new Player{})
+            Team T=new Team();
+            T.Players.Add(p);
+
         }
         public void DeletePlayer()
         {
