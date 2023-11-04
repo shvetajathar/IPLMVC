@@ -53,6 +53,26 @@ namespace dotnetapp.Managers
         {
             
         }
+
+        public void AddPlayerToDatabase()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "INSERT INTO Player (Id, Name, Age, Category,BiddingPrice) " +
+                            "OUTPUT INSERTED.Id " +
+                            "VALUES (@Id, @Name, @Age, @Category,@BiddingPrice)";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Name", instrument.Name);
+                    command.Parameters.AddWithValue("@Type", instrument.Type);
+                    command.Parameters.AddWithValue("@Price", instrument.Price);
+                    command.Parameters.AddWithValue("@Manufacturer", instrument.Manufacturer);
+                    return (int)command.ExecuteScalar();
+                }
+            }
+        }
         
         // Write your fuctions here...
         // DisplayAllPlayers
