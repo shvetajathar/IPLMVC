@@ -59,16 +59,16 @@ namespace dotnetapp.Managers
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "INSERT INTO Player (Id, Name, Age, Category,BiddingPrice) " +
-                            "OUTPUT INSERTED.Id " +
-                            "VALUES (@Id, @Name, @Age, @Category,@BiddingPrice)";
+                string query = "INSERT INTO Player VALUES (@Id, @Name, @Age, @Category,@BiddingPrice)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Name", instrument.Name);
-                    command.Parameters.AddWithValue("@Type", instrument.Type);
-                    command.Parameters.AddWithValue("@Price", instrument.Price);
-                    command.Parameters.AddWithValue("@Manufacturer", instrument.Manufacturer);
+                    command.Parameters.AddWithValue("@Id", Player.Id);
+                    command.Parameters.AddWithValue("@Name", Player.Name);
+                    command.Parameters.AddWithValue("@Age", Player.Age);
+                    command.Parameters.AddWithValue("@Category", Player.Category);
+                    command.Parameters.AddWithValue("@BiddingPrice", Player.BiddingPrice);
+                    
                     return (int)command.ExecuteScalar();
                 }
             }
