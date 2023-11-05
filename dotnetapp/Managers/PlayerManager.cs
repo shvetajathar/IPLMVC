@@ -33,8 +33,13 @@ namespace dotnetapp.Managers
             T.Players.Add(p);
 
         }
-        public void DeletePlayer()
+        public void DeletePlayer(int id)
         {
+            Player p=new Player();
+            var data=p.Find(id);
+            p.Remove(data);
+            
+
             
         }
         public void EditPlayer()
