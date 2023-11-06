@@ -23,7 +23,7 @@ namespace dotnetapp.Managers
             SqlDataReader reader=cmd.ExecuteReader();
             while(reader.Read())
             {
-                console.WriteLine($"{reader["Id"]} {reader["Name"]} {reader["Age"]} {reader["Category"]} {reader["BiddingPrice"]}");
+                console.WriteLine($"{reader["Id"]} {reader["Name"]} {reader["Age"]} {reader["Category"]} {reader["BiddingAmount"]}");
             }
 
         }
@@ -61,7 +61,7 @@ namespace dotnetapp.Managers
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "INSERT INTO Player VALUES (@Id, @Name, @Age, @Category,@BiddingPrice)";
+                string query = "INSERT INTO Player VALUES (@Id, @Name, @Age, @Category,@BiddingAmount)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -69,7 +69,7 @@ namespace dotnetapp.Managers
                     command.Parameters.AddWithValue("@Name", Player.Name);
                     command.Parameters.AddWithValue("@Age", Player.Age);
                     command.Parameters.AddWithValue("@Category", Player.Category);
-                    command.Parameters.AddWithValue("@BiddingPrice", Player.BiddingPrice);
+                    command.Parameters.AddWithValue("@BiddingAmount", Player.BiddingAmount);
                     
                     return (int)command.ExecuteScalar();
                 }
