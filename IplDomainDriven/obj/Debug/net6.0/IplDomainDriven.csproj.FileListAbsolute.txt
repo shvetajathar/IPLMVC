@@ -1,0 +1,12 @@
+/home/coder/project/workspace/IplDomainDriven/bin/Debug/net6.0/IplDomainDriven.deps.json
+/home/coder/project/workspace/IplDomainDriven/bin/Debug/net6.0/IplDomainDriven.dll
+/home/coder/project/workspace/IplDomainDriven/bin/Debug/net6.0/IplDomainDriven.pdb
+/home/coder/project/workspace/IplDomainDriven/obj/Debug/net6.0/IplDomainDriven.csproj.AssemblyReference.cache
+/home/coder/project/workspace/IplDomainDriven/obj/Debug/net6.0/IplDomainDriven.GeneratedMSBuildEditorConfig.editorconfig
+/home/coder/project/workspace/IplDomainDriven/obj/Debug/net6.0/IplDomainDriven.AssemblyInfoInputs.cache
+/home/coder/project/workspace/IplDomainDriven/obj/Debug/net6.0/IplDomainDriven.AssemblyInfo.cs
+/home/coder/project/workspace/IplDomainDriven/obj/Debug/net6.0/IplDomainDriven.csproj.CoreCompileInputs.cache
+/home/coder/project/workspace/IplDomainDriven/obj/Debug/net6.0/IplDomainDriven.dll
+/home/coder/project/workspace/IplDomainDriven/obj/Debug/net6.0/refint/IplDomainDriven.dll
+/home/coder/project/workspace/IplDomainDriven/obj/Debug/net6.0/IplDomainDriven.pdb
+/home/coder/project/workspace/IplDomainDriven/obj/Debug/net6.0/ref/IplDomainDriven.dll

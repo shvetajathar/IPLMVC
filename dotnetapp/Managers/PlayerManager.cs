@@ -38,7 +38,7 @@ namespace dotnetapp.Managers
             SqlDataReader reader = command.ExecuteReader();
             while(reader.Read())
         {   
-          Console.WriteLine($"{reader["Id"]}-----{reader["Name"]}---{reader["Age"]}---{reader["Category"]}---{reader["BiddingAmount"]}");  
+          Console.WriteLine($"{reader["Id"]}-----{reader["Name"]}---{reader["Age"]}---{reader["Category"]}---{reader["BiddingPrice"]}");  
         }
             conn.Close();
 
@@ -56,7 +56,7 @@ namespace dotnetapp.Managers
             string name = p.Name;
             int age = p.Age;
             string category = p.Category;
-            decimal biddingAmount = p.BiddingAmount;
+            decimal biddingAmount = p.BiddingPrice;
 
 
         SqlConnection conn = null;
@@ -103,7 +103,7 @@ namespace dotnetapp.Managers
                         dr[1]=p.Name;
                         dr[2]=p.Age;
                         dr[3]=p.Category;
-                        dr[4]=p.BiddingAmount;
+                        dr[4]=p.BiddingPrice;
                         break;
                     }
                 }
@@ -136,7 +136,7 @@ namespace dotnetapp.Managers
                 dr[1]=p.Name;
                 dr[2]=p.Age;
                 dr[3]=p.Category;
-                dr[4]=p.BiddingAmount;
+                dr[4]=p.BiddingPrice;
                 ds.Tables["playTable"].Rows.Add(dr);
                 adapter.Update(ds,"playTable");
             }
